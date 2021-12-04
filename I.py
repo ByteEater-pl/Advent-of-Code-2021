@@ -3,4 +3,4 @@ with open(
 	os.path.basename(sys.modules['__main__'].__file__)
 	.partition('.')[0]
 	+ '.in') as f:
-	input = f.readlines()
+	input = [l[:-1] for l in f]
